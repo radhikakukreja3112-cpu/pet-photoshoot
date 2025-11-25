@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pet Photoshoot Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1>Pet Photoshoot Generator</h1>
+
+      <section class="panel">
+        <form id="photoshoot-form">
+          <div class="field">
+            <label>1. Shopify Product ID</label>
+            <input
+              type="text"
+              id="product-id"
+              placeholder="e.g. 8192837482"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label>2. Upload pet photo</label>
+            <input type="file" id="pet-photo" accept="image/*" required />
+          </div>
+
+          <div class="field">
+            <label>3. Optional instructions</label>
+            <textarea
+              id="instructions"
+              placeholder="e.g. put my dog on a sunny beach, make the product clearly visible..."
+            ></textarea>
+          </div>
+
+          <button type="submit" id="generate-btn">✨ Generate Photoshoot</button>
+          <p id="status" class="status"></p>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Result</h2>
+        <div id="result-wrapper">
+          <p id="result-placeholder">Generated image will appear here.</p>
+          <img id="result-image" style="display:none; max-width:100%;" />
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
